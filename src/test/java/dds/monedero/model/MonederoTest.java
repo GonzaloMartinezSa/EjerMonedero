@@ -85,7 +85,7 @@ public class MonederoTest {
   }
   @Test
   public void AgregarMovACuenta() {
-    Movimiento mov = new Movimiento(LocalDate.now(), 500, true);
+    Movimiento mov = new Movimiento(LocalDate.now(), 500, new Deposito());
     mov.agregateA(cuenta);
     assertEquals(1, cuenta.getMovimientos().stream().filter(movimiento -> movimiento.getFecha().equals(LocalDate.now()) &&
         movimiento.getMonto()==mov.getMonto() && movimiento.isDeposito()==mov.isDeposito()).count());

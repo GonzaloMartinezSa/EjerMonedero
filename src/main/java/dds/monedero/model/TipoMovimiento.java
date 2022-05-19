@@ -1,5 +1,6 @@
 package dds.monedero.model;
 
 public interface TipoMovimiento {
-  public double calcularValor(Cuenta cuenta);
+  public double calcularValor(Cuenta cuenta, Movimiento movimiento);
+  public TipoMovimientoEnum getTipoExplicito();
 }
