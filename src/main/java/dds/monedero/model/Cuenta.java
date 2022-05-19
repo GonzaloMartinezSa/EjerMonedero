@@ -55,7 +55,7 @@ public class Cuenta {
   }
 
   public void agregarMovimiento(Movimiento movimiento) {
-    setSaldo(saldo + movimiento.calcularValor());
+    setSaldo(getSaldo() + movimiento.calcularValor());
     movimientos.add(movimiento);
   }
 
