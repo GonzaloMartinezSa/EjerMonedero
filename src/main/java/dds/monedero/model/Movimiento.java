@@ -24,10 +24,6 @@ public class Movimiento {
     return fecha;
   }
 
-  public boolean fueDeTipo(TipoMovimientoEnum tipo, LocalDate fecha) {
-    return iS(tipo) && esDeLaFecha(fecha);
-  }
-
   public boolean esDeLaFecha(LocalDate fecha) {
     return this.fecha.equals(fecha);
   }
