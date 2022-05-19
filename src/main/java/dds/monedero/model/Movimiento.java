@@ -24,12 +24,8 @@ public class Movimiento {
     return fecha;
   }
 
-  public boolean fueDepositado(LocalDate fecha) {
-    return iS(TipoMovimientoEnum.DEPOSITO) && esDeLaFecha(fecha);
-  }
-
-  public boolean fueExtraido(LocalDate fecha) {
-    return iS(TipoMovimientoEnum.EXTRACCION) && esDeLaFecha(fecha);
+  public boolean fueDeTipo(TipoMovimientoEnum tipo, LocalDate fecha) {
+    return iS(tipo) && esDeLaFecha(fecha);
   }
 
   public boolean esDeLaFecha(LocalDate fecha) {
