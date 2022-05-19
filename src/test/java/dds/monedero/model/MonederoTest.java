@@ -35,7 +35,7 @@ public class MonederoTest {
     cuenta.poner(1500);
     cuenta.poner(456);
     cuenta.poner(1900);
-    assertEquals(3, cuenta.getMovimientos().stream().filter(movimiento -> movimiento.isDeposito()).count());
+    assertEquals(3, cuenta.getMovimientos().stream().filter(movimiento -> movimiento.iS(TipoMovimientoEnum.DEPOSITO)).count());
   }
 
   @Test
@@ -87,8 +87,7 @@ public class MonederoTest {
   public void AgregarMovACuenta() {
     Movimiento mov = new Movimiento(LocalDate.now(), 500, new Deposito());
     mov.agregateA(cuenta);
-    assertEquals(1, cuenta.getMovimientos().stream().filter(movimiento -> movimiento.getFecha().equals(LocalDate.now()) &&
-        movimiento.getMonto()==mov.getMonto() && movimiento.isDeposito()==mov.isDeposito()).count());
+    assertTrue(cuenta.getMovimientos().contains(mov));
   }
 
 }
