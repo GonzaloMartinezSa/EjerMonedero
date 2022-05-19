@@ -32,12 +32,7 @@ public class Movimiento {
     return tipoMovimiento.getTipoExplicito() == tipo;
   }
 
-  public void agregateA(Cuenta cuenta) {
-    cuenta.setSaldo(calcularValor(cuenta));
-    cuenta.agregarMovimiento(this);
-  }
-
-  public double calcularValor(Cuenta cuenta) {
-    return tipoMovimiento.calcularValor(cuenta, this);
+  public double calcularValor() {
+    return tipoMovimiento.calcularValor(this);
   }
 }

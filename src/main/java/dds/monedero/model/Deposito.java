@@ -7,7 +7,7 @@ public class Deposito implements TipoMovimiento{
     return tipoExplicito;
   }
 
-  public double calcularValor(Cuenta cuenta, Movimiento movimiento){
-    return cuenta.getSaldo() + movimiento.getMonto();
+  public double calcularValor(Movimiento movimiento){
+    return movimiento.getMonto();
   }
 }
