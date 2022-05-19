@@ -91,5 +91,4 @@ public class MonederoTest {
         movimiento.getMonto()==mov.getMonto() && movimiento.isDeposito()==mov.isDeposito()).count());
   }
 
-
 }
